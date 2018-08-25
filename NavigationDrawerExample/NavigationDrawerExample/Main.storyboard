@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sI8-mq-gGi">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideOutMenuExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N73-rH-ugl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bY1-sJ-8Cc" appends="YES" id="c5t-Ko-yGk"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50515211650000003" green="0.72368847150000004" blue="0.68966249769999999" alpha="0.66312720069999997" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="N73-rH-ugl" secondAttribute="bottom" id="BUg-Ky-ej5"/>
+                            <constraint firstItem="N73-rH-ugl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DQw-DQ-VZp"/>
+                            <constraint firstItem="N73-rH-ugl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jp8-1B-v5w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N73-rH-ugl" secondAttribute="trailing" id="qKS-lC-3a0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0db-c0-3FG">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="8ne-dM-43D">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Iob-4W-KSW" kind="presentation" identifier="showSlidingMenu" id="UvR-3u-317"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="bY1-sJ-8Cc">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="edgePanGestureWithSender:" destination="BYZ-38-t0r" id="IUr-NV-bST"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="660" y="-311.08374384236453"/>
+        </scene>
+        <!--Sliding View Controller-->
+        <scene sceneID="Lo4-8H-8Xr">
+            <objects>
+                <viewController id="Iob-4W-KSW" customClass="SlidingViewController" customModule="SlideOutMenuExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fab-hQ-GgR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK6-P5-vua">
+                                <rect key="frame" x="300" y="44" width="75" height="734"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <action selector="closeBtnPressed:" destination="Iob-4W-KSW" eventType="touchUpInside" id="gsp-Aa-IQT"/>
+                                    <outletCollection property="gestureRecognizers" destination="cj0-ca-WAW" appends="YES" id="bj3-GN-p4I"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwM-se-0Jw">
+                                <rect key="frame" x="0.0" y="44" width="300" height="734"/>
+                                <gestureRecognizers/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47148850479999999" green="0.36524289440000002" blue="0.72368847150000004" alpha="0.66312720069999997" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="REn-OG-ISg" firstAttribute="trailing" secondItem="sK6-P5-vua" secondAttribute="trailing" id="2tM-yN-eez"/>
+                            <constraint firstItem="sK6-P5-vua" firstAttribute="leading" secondItem="iwM-se-0Jw" secondAttribute="trailing" id="9JB-9b-p9T"/>
+                            <constraint firstItem="sK6-P5-vua" firstAttribute="top" secondItem="REn-OG-ISg" secondAttribute="top" id="Bgl-l4-Erk"/>
+                            <constraint firstItem="REn-OG-ISg" firstAttribute="bottom" secondItem="iwM-se-0Jw" secondAttribute="bottom" id="D30-t7-vEh"/>
+                            <constraint firstItem="REn-OG-ISg" firstAttribute="bottom" secondItem="sK6-P5-vua" secondAttribute="bottom" id="Xlz-Oo-aPn"/>
+                            <constraint firstItem="iwM-se-0Jw" firstAttribute="leading" secondItem="REn-OG-ISg" secondAttribute="leading" id="tL9-wm-Ra8"/>
+                            <constraint firstItem="iwM-se-0Jw" firstAttribute="top" secondItem="REn-OG-ISg" secondAttribute="top" id="thQ-Hc-V7s"/>
+                            <constraint firstItem="sK6-P5-vua" firstAttribute="width" secondItem="Fab-hQ-GgR" secondAttribute="width" multiplier="0.2" id="uCg-fA-4m8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="REn-OG-ISg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifz-N6-6b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="cj0-ca-WAW">
+                    <connections>
+                        <action selector="handleGestureWithSender:" destination="Iob-4W-KSW" id="3jr-RH-uTO"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1649" y="-311"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Exd-Pt-PUq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sI8-mq-gGi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="K22-F5-dbs">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.081321229719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rKd-qD-Z7Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHE-Is-Jni" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-492" y="-310"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="25" height="25"/>
+    </resources>
+</document>
