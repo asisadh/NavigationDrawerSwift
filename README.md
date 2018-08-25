@@ -1,8 +1,8 @@
-# Slide Out Menu
+# Navigation Drawer
 [![Version](https://img.shields.io/cocoapods/v/NavigationDrawer.svg?style=flat-square)](http://cocoapods.org/pods/NavigationDrawer) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage) [![License](https://img.shields.io/cocoapods/l/NavigationDrawer.svg?style=flat-square)](http://cocoapods.org/pods/NavigationDrawer) [![Platform](https://img.shields.io/cocoapods/p/NavigationDrawer.svg?style=flat-square)](http://cocoapods.org/pods/NavigationDrawer)
 
 ## Overview
-Slide Out Menu is a simplified sliding menu control written in swift.
+Navigation Drawer is a simplified sliding menu control written in swift.
 Look into project example to see it in action!
 ### Preview Samples
 | BaseViewController | SlideViewController |  
