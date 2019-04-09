@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Navigation Drawer Swift"
-  s.version      = "1.0.0"
+  s.name         = "NavigationDrawer"
+  s.version      = "1.0.1"
   s.summary      = "Sliding Menu | Hamburger Style Menu"
 
   # This description is used to generate tags and improve search results.
@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
 
   # ――― Swift Version ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
-  s.swift_version = "4.1"
+  s.swift_version = "5"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
