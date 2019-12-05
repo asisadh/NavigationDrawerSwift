@@ -9,6 +9,7 @@
 import UIKit
 
 public class PresentMenuAnimator : NSObject {
+    public var shadowOpacity: Float = 0.7
 }
 
 extension PresentMenuAnimator : UIViewControllerAnimatedTransitioning {
@@ -30,7 +31,7 @@ extension PresentMenuAnimator : UIViewControllerAnimatedTransitioning {
         let snapshot = fromVC.view.snapshotView(afterScreenUpdates: false)
         snapshot?.tag = MenuHelper.snapshotNumber
         snapshot?.isUserInteractionEnabled = false
-        snapshot?.layer.shadowOpacity = 0.7
+        snapshot?.layer.shadowOpacity = shadowOpacity
         containerView.insertSubview(snapshot!, aboveSubview: toVC.view)
         fromVC.view.isHidden = true
         

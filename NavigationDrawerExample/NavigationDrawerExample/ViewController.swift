@@ -60,7 +60,9 @@ class ViewController: UIViewController {
 extension ViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return PresentMenuAnimator()
+        let animator = PresentMenuAnimator()
+        animator.shadowOpacity = 0.1
+        return animator
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
