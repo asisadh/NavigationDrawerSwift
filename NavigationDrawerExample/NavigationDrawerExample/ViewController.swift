@@ -47,6 +47,9 @@ class ViewController: UIViewController {
         if let destinationViewController = segue.destination as? SlidingViewController {
             destinationViewController.transitioningDelegate = self
             destinationViewController.interactor = self.interactor
+            
+            #warning("From iOS 13, you need to make presentationStyle to fullScreen.")
+            destinationViewController.modalPresentationStyle = .fullScreen
 //            destinationViewController.mainVC = self
         }
     }
