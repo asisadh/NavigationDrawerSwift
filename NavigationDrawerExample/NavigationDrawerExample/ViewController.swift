@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     @IBAction func edgePanGesture(sender: UIScreenEdgePanGestureRecognizer) {
         let translation = sender.translation(in: view)
 
-        let progress = MenuHelper.calculateProgress(translationInView: translation, viewBounds: view.bounds, direction: .Left)
+        let progress = MenuHelper.calculateProgress(translationInView: translation, viewBounds: view.bounds, direction: .Right)
 
         MenuHelper.mapGestureStateToInteractor(
             gestureState: sender.state,
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
 extension ViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let animator = PresentMenuAnimator(direction: .Right)
+        let animator = PresentMenuAnimator(direction: .Left)
         animator.shadowOpacity = 0.1
         return animator
     }

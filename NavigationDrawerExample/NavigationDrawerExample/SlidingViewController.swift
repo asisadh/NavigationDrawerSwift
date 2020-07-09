@@ -27,7 +27,7 @@ class SlidingViewController: UIViewController{
     @IBAction func handleGesture(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
         
-        let progress = MenuHelper.calculateProgress(translationInView: translation, viewBounds: view.bounds, direction: .Right)
+        let progress = MenuHelper.calculateProgress(translationInView: translation, viewBounds: view.bounds, direction: .Left)
         
         MenuHelper.mapGestureStateToInteractor(
             gestureState: sender.state,
