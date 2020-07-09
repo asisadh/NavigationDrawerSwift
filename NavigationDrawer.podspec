@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NavigationDrawer"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Sliding Menu | Hamburger Style Menu"
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/asisadh/NavigationDrawerSwift.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/asisadh/NavigationDrawerSwift.git", :tag => "1.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

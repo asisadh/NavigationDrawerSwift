@@ -2,8 +2,8 @@
 //  DismissMenuAnimator.swift
 //  Apprtc
 //
-//  Created by View9 on 1/30/18.
-//  Copyright © 2018 Dhilip. All rights reserved.
+//  Created by Aashish Adhikari on 1/30/18.
+//  Copyright © 2018 Aashish Adhikari. All rights reserved.
 //
 
 import UIKit

@@ -2,13 +2,19 @@
 //  PresentMenuAnimator.swift
 //  Apprtc
 //
-//  Created by View9 on 1/30/18.
-//  Copyright © 2018 Dhilip. All rights reserved.
+//  Created by Aashish Adhikari on 1/30/18.
+//  Copyright © 2018 Aashish Adhikari. All rights reserved.
 //
 
 import UIKit
 
 public class PresentMenuAnimator : NSObject {
+    var direction: Direction
+    
+    public init(direction: Direction) {
+        self.direction = direction
+    }
+    
     public var shadowOpacity: Float = 0.7
 }
 
@@ -38,7 +44,11 @@ extension PresentMenuAnimator : UIViewControllerAnimatedTransitioning {
         UIView.animate(
             withDuration: transitionDuration(using: transitionContext),
             animations: {
-                snapshot!.center.x += UIScreen.main.bounds.width * MenuHelper.menuWidth
+                if self.direction == .Left{
+                    snapshot!.center.x += UIScreen.main.bounds.width * MenuHelper.menuWidth
+                }else{
+                    snapshot!.center.x -= UIScreen.main.bounds.width * MenuHelper.menuWidth
+                }
         },
             completion: { _ in
                 fromVC.view.isHidden = false
